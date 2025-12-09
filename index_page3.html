@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Multimodal Retrieval (Light)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <div class="logo">
+                    <img src="images/logoteam muse3.png" width="170" alt="Logo">
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="index_page2.html">Каталог</a>
+                <a href="index_page3.html">
+                    <img src="images/guidance_shop.png" alt="Оформить заказ" width="20">
+                </a>
+                <a href="index_page4.html">О нас</a>
+            </nav>
+        </header>
+        <section class="order">
+            <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                <p class="title">Оформление брони</p>
+                <div class="order-grid">
+                    <div class="order-card">
+                        <p>Фамилия: <input type="Text" name="last_name" size=20 value="Иванова"></p>
+                        <p>Имя: <input type="Text" name="first_name" size=20 value="Юлия"></p>
+                        <p>Отчество: <input type="Text" name="third_name" size=20 value="Максимовна"></p>
+                        <p>Адрес: <input type="Text" name="adress" size=20 value="Вологда"></p>
+                    </div>
+                    <div class="order-card">
+                        <p>Ваша электронная почта:</p>
+                        <p></p>
+                        <p>
+                            <textarea cols=60 rows=4 name="email">Например, "user@example.com"</textarea>
+                        </p>
+                        <p>Итоговое количество позиций: <input type="Number" name="order_number" size=20 value="1"></p>
+                    </div>
+                    <div class="order-card">
+                        <p>Тип доставки:
+                            <input type="Radio" name="delivery" value="Samovyvoz">Самовывоз
+                            <input type="Radio" name="delivery" value="Dostavka" checked>Доставка
+                        </p>
+                        <p>Названия позиций для заказа и их размеры:</p>
+                        <p></p>
+                        <p>
+                            <textarea cols=60 rows=4 name="order">Например, "Шуба бордовая XL"</textarea>
+                        </p>
+                    </div>
+                    <div class="order-card form-buttons">
+                        <div class="form-buttons-row">
+                            <input type="reset" name="Reset" value="Обновить" class="btn-form reset">
+                            <input type="submit" name="submit" value="Отправить" class="btn-form">
+                    </div>
+                </div>
+
+
+                <input type="hidden" name="function" value="page">
+                <input type="hidden" name="page_id" value="3">
+                <input type="hidden" id="submitTime" name="submitTime">
+            </form>
+        </section>
+        <script>
+
+        </script>
+</body>
+
+</html>
