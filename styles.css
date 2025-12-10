@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Styrene ALC';
-    src: url('StyreneALC-Thin.otf') format('opentype');
+    src: url('fonts/StyreneALC-Thin.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Styrene ALC';
-    src: url('StyreneALC-Regular (1).otf') format('opentype');
+    src: url('fonts/StyreneALC-Regular (1).otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Styrene ALC';
-    src: url('StyreneALC-Bold (1).otf') format('opentype');
+    src: url('fonts/StyreneALC-Bold (1).otf') format('opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -399,7 +399,7 @@ footer {
     }
 
     .burger-menu {
-        display: block;
+        display: flex;
         background: none;
         border: none;
         font-size: 28px;
@@ -408,51 +408,46 @@ footer {
         padding: 5px;
     }
 
-    nav {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 80%;
-        height: 100vh;
-        background: white;
-        flex-direction: column;
-        padding: 80px 20px 20px;
-        gap: 10px;
-        z-index: 1000;
-        box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
-        transition: left 0.3s ease;
+    .burger-menu {
+        display: none !important;
     }
 
+    .nav-overlay {
+        display: none !important;
+    }
+    
+    nav {
+        position: static !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        background: transparent !important;
+        flex-direction: row;
+        padding: 10px 0 !important;
+        margin: 15px 0 !important;
+        gap: 8px;
+        box-shadow: none !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
     nav.open {
         left: 0;
     }
 
-    .nav-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-    }
-
-    .nav-overlay.open {
-        display: block;
-    }
-
     nav a {
-        width: 100%;
-        justify-content: center;
-        padding: 15px;
-        border-radius: 12px;
-        font-size: 16px;
+        width: auto !important;
+        padding: 10px 15px !important;
+        font-size: 14px !important;
+        border: 1px solid var(--border) !important;
+        background: #f8fafc !important;
+        border-radius: 12px !important;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     nav a img {
-        width: 20px;
-        height: 20px;
+        width: 18px !important;
+        height: 18px !important;
     }
 
     .logo img {
@@ -624,5 +619,5 @@ footer {
     .form-buttons-row {
         flex-direction: row;
     }
-
 }
+
